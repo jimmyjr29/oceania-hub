@@ -40,7 +40,6 @@ body::before {
         radial-gradient(circle at 20% 50%, rgba(120, 219, 226, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 206, 84, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(120, 219, 226, 0.05) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
     z-index: -1;
     pointer-events: none;
 }
@@ -223,12 +222,6 @@ body::before {
 }
 
 /* Animations */
-@keyframes float {
-    0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
-    33% { transform: translate(15px, -15px) rotate(120deg); }
-    66% { transform: translate(-10px, 10px) rotate(240deg); }
-}
-
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -284,9 +277,8 @@ body::before {
         padding-bottom: 40px;
     }
     
-    /* Disable background animation on mobile untuk performance */
+    /* Static background on mobile */
     body::before {
-        animation: none;
         position: absolute;
     }
 }
